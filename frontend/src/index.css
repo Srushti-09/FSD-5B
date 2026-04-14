@@ -1,22 +1,22 @@
 :root {
-  /* Dark Academia Library Palette */
-  --bg-color: #2b2521;      /* Dark Wood / Sepia Black */
-  --surface: #38312b;       /* Soft Charcoal Brown Card */
+  /* Oxford Academic Library Palette */
+  --bg-color: #0B1120;      /* Deep Oxford Blue */
+  --surface: #1E293B;       /* Smooth Navy Card */
   
-  --primary-navy: #e8dcc4;  /* Old paper / Parchment text */
-  --secondary-navy: #f3ebdb;
+  --primary-navy: #F8FAFC;  /* Crisp White */
+  --secondary-navy: #CBD5E1;
   
-  --accent-gold: #588157;   /* Classic Library Green */
-  --accent-gold-hover: #3a5a40;
+  --accent-gold: #D4AF37;   /* Antique Brass / Gold */
+  --accent-gold-hover: #BDA036;
   
-  --text-main: #f5eedc;     /* Bright parchment text */
-  --text-muted: #a69c8a;    /* Warm muted text */
+  --text-main: #F1F5F9;     /* Main text */
+  --text-muted: #94A3B8;    /* Muted navy text */
   
-  --border-light: #463b32;  /* Subtle brown edge */
-  --border-dark: #645649;
+  --border-light: #334155;  /* Subtle navy edge */
+  --border-dark: #475569;
 
-  --success: #18B85C;       /* Glowing Emerald */
-  --danger: #ef4444;        /* Strict Alert Red */
+  --success: #10B981;       /* Clean Emerald */
+  --danger: #EF4444;        /* Strict Alert Red */
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
@@ -113,12 +113,12 @@ body {
 }
 
 .library-input::placeholder {
-  color: #8b8072;
+  color: #64748B;
 }
 
 .library-input:focus {
   border-color: var(--accent-gold);
-  box-shadow: 0 0 0 2px rgba(88, 129, 87, 0.2);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.15);
   background: var(--surface);
 }
 

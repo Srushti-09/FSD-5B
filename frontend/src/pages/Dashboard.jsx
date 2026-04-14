@@ -124,7 +124,7 @@ const Dashboard = () => {
             <Library size={16} /> 
             LIBRARY MANAGEMENT SYSTEM
           </span>
-          <h1 className="display-lg" style={{ marginTop: '5px' }}>Aegis Public Library</h1>
+          <h1 className="display-lg" style={{ marginTop: '5px' }}>Alexandria Public Library</h1>
           <p className="body-md">Patron Database & Circulation System. Staff Access Only.</p>
         </div>
         <div>
