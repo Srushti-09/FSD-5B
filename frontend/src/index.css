@@ -1,21 +1,21 @@
 :root {
-  /* Institutional Private Wealth Palette (Dark) */
-  --bg-color: #0c0d12;      /* Midnight Vault Black */
-  --surface: #14161c;       /* Matte Charcoal Card */
+  /* Dark Academia Library Palette */
+  --bg-color: #2b2521;      /* Dark Wood / Sepia Black */
+  --surface: #38312b;       /* Soft Charcoal Brown Card */
   
-  --primary-navy: #e2e8f0;  /* Reused variable name: now Crisp Slate/White for primary headers */
-  --secondary-navy: #f8fafc;
+  --primary-navy: #e8dcc4;  /* Old paper / Parchment text */
+  --secondary-navy: #f3ebdb;
   
-  --accent-gold: #C09A4D;   /* Champagne Gold */
-  --accent-gold-hover: #dfb763;
+  --accent-gold: #588157;   /* Classic Library Green */
+  --accent-gold-hover: #3a5a40;
   
-  --text-main: #f8fafc;     /* Bright stark text */
-  --text-muted: #8b96a5;    /* Luxury muted text */
+  --text-main: #f5eedc;     /* Bright parchment text */
+  --text-muted: #a69c8a;    /* Warm muted text */
   
-  --border-light: #282c35;  /* Subtle dark edge */
-  --border-dark: #4b5260;
+  --border-light: #463b32;  /* Subtle brown edge */
+  --border-dark: #645649;
 
-  --success: #18B85C;       /* Glowing Wealth Emerald */
+  --success: #18B85C;       /* Glowing Emerald */
   --danger: #ef4444;        /* Strict Alert Red */
 
   --font-serif: 'Playfair Display', serif;
@@ -86,14 +86,14 @@ body {
 .corporate-panel {
   background-color: var(--surface);
   border: 1px solid var(--border-light);
-  border-radius: 4px; /* Minimal border radius for strict edge feel */
+  border-radius: 6px; 
   padding: 32px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .corporate-panel:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border-color: var(--border-dark);
 }
 
@@ -102,7 +102,7 @@ body {
   background: var(--bg-color);
   border: 1px solid var(--border-dark);
   color: var(--text-main);
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 12px 16px;
   font-family: var(--font-sans);
   font-size: 0.9rem;
@@ -112,21 +112,25 @@ body {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+.library-input::placeholder {
+  color: #8b8072;
+}
+
 .library-input:focus {
-  border-color: var(--primary-navy);
-  box-shadow: 0 0 0 2px rgba(21, 36, 69, 0.1);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px rgba(88, 129, 87, 0.2);
   background: var(--surface);
 }
 
 .btn-primary {
   background: var(--primary-navy);
-  color: var(--surface);
+  color: var(--bg-color);
   border: none;
   font-family: var(--font-sans);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
   padding: 12px 24px;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s;
   letter-spacing: 0.5px;
@@ -144,7 +148,7 @@ body {
   font-weight: 500;
   font-size: 0.9rem;
   padding: 12px 24px;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -155,13 +159,21 @@ body {
 
 .btn-tertiary {
   background: transparent;
-  color: var(--danger);
+  color: var(--text-main);
   border: none;
   font-family: var(--font-sans);
   font-weight: 500;
   font-size: 0.85rem;
   cursor: pointer;
   text-decoration: underline;
+  opacity: 0.8;
+}
+.btn-tertiary:hover {
+  opacity: 1;
+}
+
+.btn-tertiary[style*="var(--accent-gold)"], .btn-tertiary:not([style]) {
+   opacity: 1;
 }
 
 /* Institutional Data Ledger */
@@ -215,6 +227,7 @@ body {
   border: 1px solid var(--border-light);
   background: var(--bg-color);
   padding: 16px;
+  border-radius: 4px;
 }
 
 /* Status Indicator */
