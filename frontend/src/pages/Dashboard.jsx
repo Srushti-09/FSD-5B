@@ -26,7 +26,7 @@ const Dashboard = () => {
       if(filters.search) queryParams.append('search', filters.search);
       if(filters.hobbies) queryParams.append('hobbies', filters.hobbies);
 
-      const res = await fetch(`https://library-fsd-5b-backend.onrender.com/users?${queryParams.toString()}`);
+      const res = await fetch(`https://fsd-5b.onrender.com/users?${queryParams.toString()}`);
       if (res.ok) {
         const data = await res.json();
         setUsers(data.data || []);
@@ -52,7 +52,7 @@ const Dashboard = () => {
         hobbies: typeof formData.hobbies === 'string' ? formData.hobbies.split(',').map(h => h.trim()) : formData.hobbies
       };
       
-      const res = await fetch(`https://library-fsd-5b-backend.onrender.com/users${isUpdate ? `/${editId}` : ''}`, {
+      const res = await fetch(`https://fsd-5b.onrender.com/users${isUpdate ? `/${editId}` : ''}`, {
         method: isUpdate ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -90,7 +90,7 @@ const Dashboard = () => {
     addLog(`DELETE /users/${id} - Revoking patron membership...`);
     try {
       if(window.confirm('Are you strictly authorized to revoke this patron membership?')) {
-        const res = await fetch(`https://library-fsd-5b-backend.onrender.com/users/${id}`, { method: 'DELETE' });
+        const res = await fetch(`https://fsd-5b.onrender.com/users/${id}`, { method: 'DELETE' });
         if (res.ok) {
           addLog('OVERRIDE APPROVED: Record successfully expunged.');
           fetchUsers();
